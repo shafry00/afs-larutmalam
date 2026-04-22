@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Youtube } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 
 const Contact = () => {
@@ -12,7 +12,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
     console.log('Form submitted:', formData)
     alert('Thank you for your message! We\'ll get back to you soon.')
   }
@@ -28,7 +27,6 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-brand-black text-white">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16">
-          {/* Left - Info */}
           <div>
             <span className="inline-block bg-brand-yellow/20 text-brand-yellow px-4 py-1.5 rounded-full text-sm font-medium mb-4">
               Get in Touch
@@ -38,11 +36,9 @@ const Contact = () => {
               <span className="text-brand-yellow">Amazing</span>
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Ready to start your project? Have a question? We'd love to hear from you. 
-              Send us a message and we'll respond as soon as possible.
+              Ready to start your project? Have a question? We'd love to hear from you.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
@@ -79,88 +75,43 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="mt-10">
               <div className="text-sm text-gray-400 mb-4">Follow Us</div>
               <div className="flex gap-4">
-                <a
-                  href="https://www.instagram.com/accidentallyfun.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-coral transition-colors"
-                >
-                  <Instagram className="w-5 h-5" />
+                <a href="https://www.instagram.com/accidentallyfun.id/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-coral transition-colors" aria-label="Instagram">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <a
-                  href="https://www.linkedin.com/company/afs-larutmalam/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-teal transition-colors"
-                >
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://www.linkedin.com/company/afs-larutmalam/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-teal transition-colors" aria-label="LinkedIn">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
-                <a
-                  href="https://www.youtube.com/@accidentallyfunstudio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-coral transition-colors"
-                >
-                  <Youtube className="w-5 h-5" />
+                <a href="https://www.youtube.com/@accidentallyfunstudio" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-coral transition-colors" aria-label="YouTube">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Right - Form */}
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors"
-                    placeholder="Your name"
-                  />
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors" placeholder="Your name" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors"
-                    placeholder="your@email.com"
-                  />
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors" placeholder="your@email.com" />
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">Company</label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors"
-                    placeholder="Your company"
-                  />
+                  <input type="text" name="company" value={formData.company} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors" placeholder="Your company" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Service</label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors"
-                  >
+                  <select name="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors">
                     <option value="" className="bg-brand-black">Select a service</option>
                     <option value="game-dev" className="bg-brand-black">Game Development</option>
                     <option value="game-services" className="bg-brand-black">Game Services</option>
@@ -173,21 +124,10 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors resize-none"
-                  placeholder="Tell us about your project..."
-                />
+                <textarea name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-brand-yellow transition-colors resize-none" placeholder="Tell us about your project..." />
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-brand-yellow text-brand-black py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-brand-yellow/90 transition-all"
-              >
+              <button type="submit" className="w-full bg-brand-yellow text-brand-black py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-brand-yellow/90 transition-all">
                 <Send className="w-5 h-5" />
                 Send Message
               </button>
